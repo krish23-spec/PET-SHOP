@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cats - PetPals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #fff8f0;
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(45deg, #ffc6c1, #ffd9a0);
+      color: #fff;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .cat-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .cat-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .cat-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+
+    .cat-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .cat-info {
+      padding: 1.2rem;
+    }
+
+    .cat-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #ff914d;
+    }
+
+    .cat-info p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+     
+    }
+
+    .back-home a {
+      padding: 0.8rem 2rem;
+      background-color: #ff914d;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #e5722b;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <h1>🐱 Beautiful Cat Breeds</h1>
+    <p>Find your purr-fect companion from our list of adorable cats!</p>
+  </header>
+
+  <section class="section cat-container">
+    <div class="cat-card" data-aos="zoom-in">
+      <img src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_960_720.jpg" alt="Persian Cat"/>
+      <div class="cat-info">
+        <h3>Persian</h3>
+        <p>Known for their luxurious coats and sweet personalities. They love lounging and being pampered.</p>
+      </div>
+    </div>
+
+    <div class="cat-card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="cat/alecsander-alves-8u0x3oTIQY4-unsplash.jpg" alt="Siamese Cat"/>
+      <div class="cat-info">
+        <h3>Siamese</h3>
+        <p>Elegant and vocal, Siamese cats are affectionate and very social. Perfect for a lively home.</p>
+      </div>
+    </div>
+
+    <div class="cat-card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="cat/philip-auld-OBza1T--_R4-unsplash.jpg" alt="Maine Coon"/>
+      <div class="cat-info">
+        <h3>Maine Coon</h3>
+        <p>Large, fluffy, and gentle. These “gentle giants” are great for families and love playtime.</p>
+      </div>
+    </div>
+
+    <div class="cat-card" data-aos="zoom-in" data-aos-delay="300">
+      <img src="cat/marijn-van-der-marel-hztQjDW8jv8-unsplash.jpg" alt="British Shorthair"/>
+      <div class="cat-info">
+        <h3>British Shorthair</h3>
+        <p>Chubby cheeks and a calm nature make these cats perfect indoor companions.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-home" >
+    <a href="index.html">⬅ Back to Home</a>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000 });</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - PetPals</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fff8f0;
+      color: #333;
+    }
+
+    .contact-section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 2.5rem;
+      color: #ff914d;
+      margin-bottom: 1rem;
+    }
+
+    .contact-section p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    input, textarea {
+      padding: 1rem;
+      border: none;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    .radio-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .radio-group label {
+      background: #fff;
+      padding: 0.8rem 1.2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .radio-group input[type="radio"] {
+      display: none;
+    }
+
+    .radio-group input:checked + label {
+      background: #ff914d;
+      color: white;
+    }
+
+    .map-container {
+      margin-top: 3rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      animation: fadeInUp 1s ease 0.5s forwards;
+    }
+
+    button {
+      background: #ff914d;
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #e6803d;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .radio-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Have questions or want to know more about your favorite pet? Reach out to us!</p>
+
+    <form action="https://formsubmit.co/thakurkrish7221@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_next" value="https://thakur-krish.github.io/petshop/thank-you.html">
+      
+        <input type="text" name="name" placeholder="Your Name" required />
+      
+        <div class="radio-group">
+          <input type="radio" id="dog" name="pet" value="Dog" required />
+          <label for="dog">🐶 Dog</label>
+      
+          <input type="radio" id="cat" name="pet" value="Cat" />
+          <label for="cat">🐱 Cat</label>
+      
+          <input type="radio" id="bird" name="pet" value="Bird" />
+          <label for="bird">🐦 Bird</label>
+        </div>
+      
+        <textarea name="message" rows="5" placeholder="Write your question here..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+    <div class="map-container" style="margin-top: 3rem;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14011.91815944792!2d77.209021!3d28.613939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd1a2d3f0b0d%3A0x7d3e28a67443b8af!2sConnaught%20Place%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1616817843929!5m2!1sen!2sin"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pet Adoption Application</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f9f9ff, #dbe9ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.form-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  animation: slideIn 1s ease;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #6e8efb;
+  outline: none;
+}
+
+.submit-btn {
+  background: linear-gradient(to right, #6e8efb, #a777e3);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+    </style>
+  <div class="form-container">
+    <h1>Pet Adoption Application</h1>
+    <p>Please fill in the form below to apply for adoption. We'll contact you via email after reviewing.</p>
+
+    <form action="https://formsubmit.co/thakurkrish7221@gmail.com" method="POST">
+      <!-- Required to redirect to thank you page -->
+      <input type="hidden" name="_next" value="https://thakur-krish.github.io/petshop/thank-you2.html">
+      <input type="hidden" name="_captcha" value="false">
+
+      <div class="input-group">
+        <label>Full Name</label>
+        <input type="text" name="Name" required>
+      </div>
+
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" name="Email" required>
+      </div>
+
+      <div class="input-group">
+        <label>Phone Number</label>
+        <input type="tel" name="Phone" required>
+      </div>
+
+      <div class="input-group">
+        <label>Which Pet You Want to Adopt?</label>
+        <select name="Pet Type" required>
+          <option value="">Select</option>
+          <option>Dog</option>
+          <option>Cat</option>
+          <option>Bird</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label>Address</label>
+        <textarea name="Address" rows="3" required></textarea>
+      </div>
+
+      <div class="input-group">
+        <label>Why do you want to adopt this pet?</label>
+        <textarea name="Reason" rows="3" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+  </div>
+</body>
+</html>

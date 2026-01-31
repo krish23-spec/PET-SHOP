@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetPals</title>
+</head>
+<style>
+    :root {
+    --main-color: #ff914d;
+    --bg-color: #fffaf4;
+    --text-color: #222;
+    --accent: #ff6f61;
+  }
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+  .navbar
+  {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .logo
+  {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    animation: scalIn 0.8s ease-out forwards;
+  }
+  @keyframes scalIn {
+    0%{transform: scale(0); opacity: 0;}
+    100%{transform: scale(1); opacity: 1;}
+  }
+
+  .menu-icon
+  {
+    display: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+ #toggle {
+    display: none;
+  }
+  .nav-links
+  {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  .nav-links li{
+ position: relative;
+  }
+  .nav-links a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    position: relative;
+    padding: 6px 10px;
+    transition: all 0.3s ease;
+  }
+  .nav-links a:hover {
+    color: var(--bg-color);
+  }
+.dropdown-menu
+{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: dropFade 0.3s ease forwards;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    z-index: 100;
+    min-width: 160px;
+}
+
+ @keyframes dropFade {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+    .dropdown-menu li a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    display: block;
+    transition: 0.3s ease;
+  }
+    .dropdown-menu li a:hover {
+    background-color: var(--main-color);
+    color: white;
+  }
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+</style>
+<body>
+    <header>
+        <nav class="navbar">
+        <div class="logo">🐾 PetPals</div>
+           <label for="toggle" class="menu-icon">&#9776;</label>
+           <ul class="nav-links">
+            <li><a href="#home">HOME</a></li>
+            <li class="dropdown">
+                <a href="" class="dropdown-toggle">Shop</a>
+                <ul class="dropdown-menu">
+                    <li><a href="">Dogs</a></li>
+                    <li><a href="">Cats</a></li>
+                    <li><a href="">Birds</a></li>
+                    <li><a href="">ACC</a></li>
+                </ul>
+            </li>
+            <li><a href="">about</a></li>
+            <li><a href="">contact</a></li>
+           </ul>
+        </nav>
+
+    <section class="hero" id="hero">
+      <h1><span>PetPals</span> - Love for Your Pets</h1>
+      <p>Shop the best for your furry, feathery, or fluffy friends!</p>
+      <a href="#" class="btn">See Now</a>
+    </section>
+    </header>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dogs - PetPals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background: #fffaf5;
+      color: #222;
+    }
+
+    header {
+      background: linear-gradient(60deg, #ffcc70, #ff8c42);
+      padding: 3rem 1rem;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-size: 3.2rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.1rem;
+    }
+
+    .dog-section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .dog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .dog-card {
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .dog-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 14px 35px rgba(0,0,0,0.2);
+    }
+
+    .dog-card img {
+      width: 100%;
+      height: 220px;
+      display: 100% 100%;
+    }
+
+    .dog-info {
+      padding: 1.5rem;
+    }
+
+    .dog-info h3 {
+      font-size: 1.6rem;
+      color: #f67b3d;
+      margin-bottom: 0.5rem;
+    }
+
+    .dog-info p {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .back-home {
+      text-align: center;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .back-home a {
+      padding: 0.8rem 2rem;
+      background-color: #f67b3d;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 25px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+
+    .back-home a:hover {
+      background-color: #e36422;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <h1>🐶 Loyal Dog Breeds</h1>
+    <p>Meet our most loyal and friendly dogs waiting for your love!</p>
+  </header>
+
+  <section class="dog-section">
+    <div class="dog-grid">
+      <div class="dog-card" data-aos="fade-up">
+        <img src="dog/l.d.jpg" alt="Labrador Retriever">
+        <div class="dog-info">
+          <h3>Labrador Retriever</h3>
+          <p>Smart, friendly, and playful. Labradors are family favorites and love kids!</p>
+        </div>
+      </div>
+
+      <div class="dog-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="dog/jerman.jpg" alt="German Shepherd">
+        <div class="dog-info">
+          <h3>German Shepherd</h3>
+          <p>Loyal, intelligent, and strong. Perfect for protection and companionship.</p>
+        </div>
+      </div>
+
+      <div class="dog-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="dog/golden.jpg" alt="Golden Retriever">
+        <div class="dog-info">
+          <h3>Golden Retriever</h3>
+          <p>Friendly and outgoing. These golden beauties are affectionate and active.</p>
+        </div>
+      </div>
+
+      <div class="dog-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="dog/luke-macgillivray-p_qco2Eo-E0-unsplash.jpg" alt="Beagle">
+        <div class="dog-info">
+          <h3>Beagle</h3>
+          <p>Small, curious, and energetic. Beagles are perfect for families and kids!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-home">
+    <a href="index.html">⬅ Back to Home</a>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000 });</script>
+</body>
+</html>
